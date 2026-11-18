@@ -75,6 +75,10 @@ impl Language for TypeScript {
         "typescript"
     }
 
+    fn settings(&self) -> &[&str] {
+        &["paths"]
+    }
+
     fn doc_format(&self) -> &str {
         "md"
     }
