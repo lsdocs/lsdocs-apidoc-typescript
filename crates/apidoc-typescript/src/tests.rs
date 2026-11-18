@@ -296,14 +296,16 @@ async fn documents_a_package_with_references() {
     let dir = site("plugin", &[("src/index.ts", INDEX)]);
     let page = "```{js:currentmodule} shapes\n```\n\nSee {js:func}`area` and {js:class}`~shapes.Circle`.\n\n```{js:auto} double\n```\n";
     let plugin = plugin();
-    let init = InitializeParams {
-        site: SiteInfo {
-            root: Some(dir.to_string_lossy().into_owned()),
-            ..SiteInfo::default()
+    let init = lsdocs_plugin_sdk::Setup::with_settings(
+        InitializeParams {
+            site: SiteInfo {
+                root: Some(dir.to_string_lossy().into_owned()),
+                ..SiteInfo::default()
+            },
+            ..InitializeParams::default()
         },
-        options: json!({"paths": [{"path": "src/index.ts", "module": "shapes"}]}),
-        ..InitializeParams::default()
-    };
+        json!({"paths": [{"path": "src/index.ts", "module": "shapes"}]}),
+    );
     let declared = plugin.capabilities_for(&init).syntax;
     let (guide, diagnostics) =
         lsdocs_parser_markdown::parse_with_syntax("guide.md", page, &declared);
