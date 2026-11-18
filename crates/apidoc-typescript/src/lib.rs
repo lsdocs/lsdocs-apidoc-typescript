@@ -11,7 +11,12 @@
 //! [[plugins]]
 //! name = "typescript"
 //! builtin = "apidoc-typescript"
-//! options = { paths = [{ path = "src/index.ts", module = "my-package" }, "src/util"] }
+//! ```
+//!
+//! with its settings in `.config/lsdocs/typescript/settings.toml`:
+//!
+//! ```toml
+//! paths = [{ path = "src/index.ts", module = "my-package" }, "src/util"]
 //! ```
 //!
 //! - **Paths** (relative to the site directory): a file is a module, named
@@ -38,7 +43,7 @@
 //!   `js:func`, `js:meth`, `js:class`, `js:interface`, `js:type`,
 //!   `js:enum`, `js:attr`, `js:data`, `js:mod`, `js:obj`.
 //!
-//! Options: `paths` (required for generated pages) and those of the
+//! Settings: `paths` (required for generated pages) and those of the
 //! framework (`output`, `private`, `title`, `doc_format`, `doc_style`,
 //! `generate`, `primary`).
 
