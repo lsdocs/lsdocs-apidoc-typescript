@@ -29,6 +29,10 @@ ignore = true
 multiple-versions = "warn"
 wildcards = "deny"
 allow-wildcard-paths = true
+# Proc-macros still on syn 2 (the rest of the graph is on syn 3).
+skip-tree = [
+    { crate = "phf_macros@0.14", reason = "oxc; waits on oxc moving to a phf on syn 3" },
+]
 
 [sources]
 unknown-registry = "deny"
