@@ -4,7 +4,7 @@ description = "First-party plugin documenting TypeScript APIs from their source 
 version = "0.1.0"
 edition.workspace = true
 # Above the workspace's: its parser needs it.
-rust-version = "1.97"
+rust-version.workspace = true
 license.workspace = true
 repository.workspace = true
 
