@@ -8,7 +8,7 @@ members = [
 edition = "2024"
 # The base MSRV; crates needing more set their own (`nur msrv` checks
 # each crate on its own).
-rust-version = "1.89"
+rust-version = "1.98"
 license = "Apache-2.0 OR MIT"
 repository = "https://github.com/lsdocs/lsdocs-apidoc-typescript"
 
