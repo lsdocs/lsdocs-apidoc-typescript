@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1](https://github.com/lsdocs/lsdocs-apidoc-typescript/compare/lsdocs-apidoc-typescript/v0.1.0...lsdocs-apidoc-typescript/v0.1.1) - 2026-11-25
+
+### Other
+
+- parse with lsdocs-parser-markdown's myst dialect ([#18](https://github.com/lsdocs/lsdocs-apidoc-typescript/pull/18))
+- *(deps)* update rust dependencies to v0.159.0 ([#14](https://github.com/lsdocs/lsdocs-apidoc-typescript/pull/14))
+
 ## [0.1.0](https://github.com/lsdocs/lsdocs-apidoc-typescript/releases/tag/lsdocs-apidoc-typescript/v0.1.0) - 2026-11-23
 
 ### Added
