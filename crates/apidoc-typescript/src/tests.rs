@@ -308,13 +308,13 @@ async fn documents_a_package_with_references() {
     );
     let declared = plugin.capabilities_for(&init).syntax;
     let (guide, diagnostics) =
-        lsdocs_parser_markdown::parse_with_syntax("guide.md", page, &declared);
+        lsdocs_parser_markdown::myst::parse_with_syntax("guide.md", page, &declared);
     assert!(diagnostics.is_empty(), "{diagnostics:?}");
     let ctx = context_with_parsers(
         &plugin,
         &init,
         vec![
-            lsdocs_parser_markdown::plugin(),
+            lsdocs_parser_markdown::myst::plugin(),
             lsdocs_parser_rst::plugin(),
         ],
     );
